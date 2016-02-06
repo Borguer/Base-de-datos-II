@@ -1,0 +1,19 @@
+create table simple1(id_simple integer, edad integer, nombre varchar2(40));
+DECLARE
+mi_edad integer;
+BEGIN
+mi_edad=20;
+for i in 1..20 loop
+mi_edad=mi_edad+i
+insert into simple1 values(i, mi_edad, 'Juan Carlos');
+end loop; 
+end;
+/
+select* from simple1
+
+declare mi_indice integer;
+begin
+select id_simple into mi_indice from simple1 where id_simple=21;
+dbms_output,put_line(mi nombre);
+end;
+/
